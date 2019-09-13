@@ -10,7 +10,7 @@ features = "src/test/java/com.CM.Features"
 ,glue= {"seleniumgluecode"}
 ,dryRun = true
 ,monochrome = true
-,format = {"pretty","html:target/cucumber"}
+,format = {"pretty","html:target/htmlReports"}
 )
 
 public class TestRunner_01 {
