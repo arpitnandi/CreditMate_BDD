@@ -4,12 +4,11 @@ Feature: Validating deffrenet views for all User Types
 
 Scenario Outline: First page view after login for all User Types
     Given User launches the application
-    When Clicks on the 'Login As' menu
-    And Clicks on <Interface> option
+    When login as <Interface> user
     Then The login window opens for <Interface> users
-    When User enters <Email> and <Password> and clicks on 'Sign In' button
-    Then The User's field is showing User name as <User Name>
-    And User logs out and Clicks on CreditMate title area
+    When User do sign in with <Email> and <Password>
+    Then User clicks on the button which displays <User Name>
+    And User Sign Out navegates on to the Startup page
 
  
     Examples: 

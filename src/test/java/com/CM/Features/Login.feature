@@ -2,24 +2,19 @@
 
 Feature: CreditMate Login functionality test
 
-  Scenario Outline: Test Login for all user types with Valid credentials
+  Scenario: Test Login for all user types with Valid credentials
     Given User launches the application
-    When Clicks on the 'Login As' menu
-    And Clicks on <Interface> option
+    When login as <Interface> user
     Then The login window opens for <Interface> users
-    When User enters <Email> and <Password> and clicks on 'Sign In' button
-    Then <User Name> displays on the 'User Name' button
-    When Clicks on 'User Name' button
-    And Clicks on 'Sign Out' option
-    And Clicks on CreditMate title area
-    Then User navegates on to the Startup page
+    When User do sign in with <Email> and <Password>
+    Then User clicks on the button which displays <User Name>
+    And User Sign Out navegates on to the Startup page
     
   Scenario Outline: Test Login for all user types with Invalid credentials
     Given User launches the application
-    When Clicks on the 'Login As' menu
-    And Clicks on <Interface> option
+    When login as <Interface> user
     Then The login window opens for <Interface> users
-    When Check Error messages for Invalid Email and Invalid Password
+    When User do sign in with Email Invalid and Password Invalid
     | Email Invalid        | Password Invalid |
     | abc.xyz@uvw.rst      | gg12^%3b         |
     | 12345_@$%^@JDFFFJ.CX | 1234567890       |
