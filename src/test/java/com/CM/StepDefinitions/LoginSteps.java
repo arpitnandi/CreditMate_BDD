@@ -2,7 +2,7 @@ package com.CM.StepDefinitions;
 
 import cucumber.api.java.en.*;
 
-public class Login 
+public class LoginSteps 
 {
 	@Given("^User launches the application$")
 	public void user_launches_the_application() throws Throwable 
@@ -10,25 +10,25 @@ public class Login
 		System.out.println("Step 1");
 	}
 	
-	@When("^login as (/.*/) user$")
+	@When("^login as (.*) user$")
 	public void login_as_CreditMate_user(String Interface) throws Throwable 
 	{
 		System.out.println("Step 2");
 	}
 	
-	@Then("^The login window opens for (/.*/) users$")
+	@Then("^The login window opens for (.*) users$")
 	public void the_login_window_opens_for_CreditMate_users(String UserType) throws Throwable 
 	{
 		System.out.println("Step 3");
 	}
 	
-	@When("^User do sign in with (/.*/) and (/.*/)$")
+	@When("^User do sign in with (.*) and (.*)$")
 	public void user_do_sign_in_with_arpit_n_testyantra_com_and_Arpit(String Email, String Password) throws Throwable 
 	{
 		System.out.println("Step 4");
 	}
 	
-	@Then("^User clicks on the button which displays (/.*/)$")
+	@Then("^User clicks on the button which displays (.*)$")
 	public void user_clicks_on_the_button_which_displays_Arpit_Nandi(String UserName) throws Throwable 
 	{
 		System.out.println("Step 5");
