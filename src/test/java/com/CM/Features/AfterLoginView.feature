@@ -5,7 +5,7 @@ Feature: Validating deffrenet views for all User Types
 Scenario Outline: First page view after login for all User Types
     Given User launches the application
     When login as <Interface> user
-    Then The login window opens for <Interface> users
+    Then The login window opens for <UserType> users
     When User do sign in with <Email> and <Password>
     Then User clicks on the button which displays <User Name>
     And User Sign Out navegates on to the Startup page
