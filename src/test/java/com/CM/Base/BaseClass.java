@@ -11,36 +11,36 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseClass 
 {
-	public String LanguageBinders = "C:\\Eclps_Projects\\Browser-Drivers\\";
+	public String LanguageBinders = "C:\\Users\\Arpit\\eclipse-workspace\\Language_Binders\\";
 	public WebDriver D = null ;
 	public Actions A ;
 	public WebDriverWait W ;
 	
 	public WebDriver initDriver(String Browser) 
 	{
-		String Driver = "";
-		
 		if( Browser.toLowerCase() == "chrome" )
-			Driver = "chromedriver" ;
-		if( Browser.toLowerCase() == "firefox" )
-			Driver = "geckodriver" ;
-		if( Browser.toLowerCase() == "ie" )
-			Driver = "IEDriverserver" ;
-		
-		System.setProperty("wedriver."+Browser.toLowerCase()+".driver", LanguageBinders+Driver+".exe" );
-
-		if( Browser.toLowerCase() == "chrome" )
+		{
+			System.setProperty("webdriver.chrome.driver", LanguageBinders + "chromedriver.exe" );
 			D = new ChromeDriver() ;
+		}
 		if( Browser.toLowerCase() == "firefox" )
+		{
+			System.setProperty("webdriver.gecko.driver", LanguageBinders + "geckodriver.exe" );
 			D = new FirefoxDriver() ;
+		}
 		if( Browser.toLowerCase() == "ie" )
-			D = new InternetExplorerDriver(); 
+		{
+			System.setProperty("webdriver.ie.driver", LanguageBinders + "IEDriverServer.exe" );
+			D = new InternetExplorerDriver();
+		}
 		
 		return D;
 	}
 	
-	public void launchSession(String App, long IWait, long WWait ) 
+	public void launchSession(WebDriver Driver, String App, long IWait, long WWait ) 
 	{
+		D = Driver;
+		
 		D.get( App );
 		D.manage().window().maximize();
 
