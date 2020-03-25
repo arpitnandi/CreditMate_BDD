@@ -3,13 +3,14 @@
   <groupId>com.CM.Collect.BDD</groupId>
   <artifactId>com.CM.Collect.BDD</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
   
 <dependencies>
 
   <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>3.7.1</version>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
   </dependency>
 
   <dependency>
