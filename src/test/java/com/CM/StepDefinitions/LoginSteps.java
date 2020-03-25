@@ -15,7 +15,7 @@ public class LoginSteps extends BaseClass
 	@Given("^User launches the application$")
 	public void user_launches_the_application() throws Throwable 
 	{
-		WebDriver D = initDriver("firefox");
+		WebDriver D = initDriver("chrome");
 		
 		launchSession(D, "https://www.creditmate.in/", 5, 30);
 		
