@@ -17,7 +17,7 @@ public class LoginSteps extends BaseClass
 	{
 		WebDriver D = initDriver("firefox");
 		
-		launchSession(D, "https://www.creditmate.in/", 5, 0);
+		launchSession(D, "https://www.creditmate.in/", 5, 30);
 		
 		Sessions.add( D.getWindowHandle() );
 		
